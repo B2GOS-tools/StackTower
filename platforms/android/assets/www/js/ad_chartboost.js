@@ -105,16 +105,16 @@ function cb_showMoreApp()
 //显示奖励广告
 function cb_showRewardVedio(e)
 {
-  if(!rewardVedioCached)
-  {
-    if(e && typeof e == "function")
-    {
-      e(0);
-    }
-  }
-  else
-  {
+  // if(!rewardVedioCached)
+  // {
+  //   if(e && typeof e == "function")
+  //   {
+  //     e(0);
+  //   }
+  // }
+  // else
+  // {
     vedioCallBack = e;
     window.chartboost.showRewardedVideoAd('Default');
-  }
+  //}
 }
