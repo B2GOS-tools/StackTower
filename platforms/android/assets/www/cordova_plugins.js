@@ -21,7 +21,8 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.2",
     "com.google.playservices": "19.0.0",
     "com.cranberrygame.phonegap.plugin.ad.admob": "1.0.39",
-    "cordova-plugin-ad-chartboost": "1.0.81"
+    "cordova-plugin-ad-chartboost": "1.0.81",
+    "cordova-plugin-crosswalk-webview": "1.7.0"
 };
 // BOTTOM OF METADATA
 });

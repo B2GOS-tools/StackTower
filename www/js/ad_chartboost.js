@@ -23,6 +23,7 @@ else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
 
 var loadedLocations = new Array();
 
+var rewardVedioCached = false;
 var vedioCallBack ;
 
 function cb_init()
@@ -30,6 +31,7 @@ function cb_init()
   window.chartboost.setUp(cbid.appid,cbid.appSignature);
   window.chartboost.onInterstitialAdPreloaded = cb_OnIntersitialPreload;
   window.chartboost.onInterstitialAdShown = cb_OnIntersitialShown;
+  window.chartboost.onRewardedVideoAdPreloaded = cb_OnRewardedVedioPreloaded;
   cb_preloadIntersitial('Default');
   window.chartboost.preloadRewardedVideoAd('Default');
  // cb_preloadIntersitial('Menu');
@@ -39,6 +41,12 @@ function cb_init()
   window.chartboost.onRewardedVideoAdHidden
   //window.chartboost.onInterstitialAdPreloaded = function(location){alert(location)};
   //alert('init chartboost');
+}
+
+function cb_OnRewardedVedioPreloaded(location)
+{
+  console.log("rewardVedioCached");
+  rewardVedioCached = true;
 }
 
 function cb_preloadIntersitial(location)
@@ -70,13 +78,14 @@ function cb_OnIntersitialShown(location)
   console.log("intersitial shown " + location);
   cb_preloadIntersitial(location);
 }
-
+//
 function cb_OnIntersitialPreload(location)
 {
   loadedLocations[location] = 1;
   console.log("intersitial preload " + location);
 }
 
+//显示广告
 function cb_show(location)
 {
   if(loadedLocations[location])
@@ -87,13 +96,25 @@ function cb_show(location)
   return 0;
 }
 
+//
 function cb_showMoreApp()
 {
   window.chartboost.showMoreAppsAd('Default');
 }
 
+//显示奖励广告
 function cb_showRewardVedio(e)
 {
-  vedioCallBack = e;
-  window.chartboost.showRewardedVideoAd('Default');
+  if(!rewardVedioCached)
+  {
+    if(e && typeof e == "function")
+    {
+      e(0);
+    }
+  }
+  else
+  {
+    vedioCallBack = e;
+    window.chartboost.showRewardedVideoAd('Default');
+  }
 }

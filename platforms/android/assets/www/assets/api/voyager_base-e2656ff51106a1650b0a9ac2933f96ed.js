@@ -9798,6 +9798,7 @@ function(e, t, n) {
             // }) : this._showAd(Softgames.prototype.popupIncentivise, t, function(t) {
             //     return t !== void 0 && n._trackEvent("incentiviseAdPopopClosed" + t), typeof e == "function" && e(t === "ByTimeout" || t === "ByUserAdClicked"), n.closeButton.click()
             // }, !1)
+            console.log("_displayIncentiviseAdPopup");
             ad_showRewardVedio(e);
         }, Softgames.prototype._displayBannerShortInterval = function() {
             return SG_jQuery.now() - this.displayBannerLastTime < this.displayBannerInterval

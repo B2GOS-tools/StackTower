@@ -19,5 +19,6 @@ function ad_showMoreApp()
 
 function ad_showRewardVedio(e)
 {
+	console.log('show reward vedio!');
 	cb_showRewardVedio(e);
 }

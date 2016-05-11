@@ -19,6 +19,30 @@
                         {
                             "xml": "<feature name=\"ChartboostPlugin\"><param name=\"android-package\" value=\"com.cranberrygame.cordova.plugin.ad.chartboost.ChartboostPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"xwalk_core_library_beta:18+\" name=\"xwalkVersion\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"xwalk_core_library_canary:17+\" name=\"xwalkLiteVersion\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference default=\"true\" name=\"xwalkMultipleApk\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -46,6 +70,10 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         }
                     ],
@@ -83,6 +111,9 @@
         },
         "cordova-plugin-ad-chartboost": {
             "PACKAGE_NAME": "com.fox.stacktower"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.fox.stacktower"
         }
     },
     "dependent_plugins": {},
@@ -106,6 +137,7 @@
         "cordova-plugin-whitelist": "1.2.2",
         "com.google.playservices": "19.0.0",
         "com.cranberrygame.phonegap.plugin.ad.admob": "1.0.39",
-        "cordova-plugin-ad-chartboost": "1.0.81"
+        "cordova-plugin-ad-chartboost": "1.0.81",
+        "cordova-plugin-crosswalk-webview": "1.7.0"
     }
 }

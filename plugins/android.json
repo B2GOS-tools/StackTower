@@ -10,13 +10,16 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.fox.stacktower"
         },
-         "com.google.playservices": {
+        "com.google.playservices": {
             "PACKAGE_NAME": "com.fox.stacktower"
         },
         "com.cranberrygame.phonegap.plugin.ad.admob": {
             "PACKAGE_NAME": "com.fox.stacktower"
         },
         "cordova-plugin-ad-chartboost": {
+            "PACKAGE_NAME": "com.fox.stacktower"
+        },
+        "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.fox.stacktower"
         }
     },
