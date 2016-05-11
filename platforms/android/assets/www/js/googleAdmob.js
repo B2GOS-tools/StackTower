@@ -6,8 +6,8 @@ var mobid ={};
 if (/(android)/i.test(navigator.userAgent)) {
 	//alert('android');
 mobid={
-	bannerAdUnit:"ca-app-pub-1395662679269229/3837391990",
-	intersititalAdUnit:"ca-app-pub-1395662679269229/3837391990"
+	// bannerAdUnit:"ca-app-pub-1395662679269229/3837391990",
+	// intersititalAdUnit:"ca-app-pub-1395662679269229/3837391990"
   };
 }
 else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
